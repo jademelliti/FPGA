@@ -1,14 +1,14 @@
 # FPGA
 
-Utilisation de Vivado:
-- Implémentation de Ascon
+Using Vivado:
+- Implementation of Ascon
 - Simulation
-- Génération du bitstream pour la carte FPGA
-- Utilisation un protocole de communication de type UART
-- Chiffrement/déchiffrement Ascon des données
+- Generating the bitstream for the FPGA board
+- Use of a UART-type communication protocol
+- Ascon data encryption/decryption
 
 
-Utilisation de Python:
-- Lire le fichier ECG encrypté
-- Décrypter
-- Analyser les signaux (BPM...)
+Using of Python:
+- Read the encrypted ECG file
+- Decrypt
+- Analyse signals (BPM, etc.)
