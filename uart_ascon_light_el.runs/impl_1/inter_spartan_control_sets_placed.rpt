@@ -1,0 +1,99 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
+| Date         : Wed Mar 26 19:00:31 2025
+| Host         : DESKTOP-SEAP0O1 running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file inter_spartan_control_sets_placed.rpt
+| Design       : inter_spartan
+| Device       : xc7z020
+------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    21 |
+|    Minimum number of control sets                        |    21 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |    25 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    21 |
+| >= 0 to < 4        |     0 |
+| >= 4 to < 6        |     2 |
+| >= 6 to < 8        |     0 |
+| >= 8 to < 10       |     4 |
+| >= 10 to < 12      |     0 |
+| >= 12 to < 14      |     1 |
+| >= 14 to < 16      |     1 |
+| >= 16              |    13 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |               0 |            0 |
+| No           | No                    | Yes                    |             131 |           36 |
+| No           | Yes                   | No                     |               0 |            0 |
+| Yes          | No                    | No                     |               0 |            0 |
+| Yes          | No                    | Yes                    |            5471 |         1129 |
+| Yes          | Yes                   | No                     |               5 |            1 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++---------------------------+--------------------------------------------------+--------------------------------+------------------+----------------+--------------+
+|        Clock Signal       |                   Enable Signal                  |        Set/Reset Signal        | Slice Load Count | Bel Load Count | Bels / Slice |
++---------------------------+--------------------------------------------------+--------------------------------+------------------+----------------+--------------+
+|  clk_wiz_50/inst/clk_out1 | ascon_0/U0/enable_round_o                        | reset_i_IBUF                   |                2 |              4 |         2.00 |
+|  clk_wiz_50/inst/clk_out1 | nolabel_line131/en_cpt_mux_o                     | nolabel_line131/init_cpt_mux_o |                1 |              5 |         5.00 |
+|  clk_wiz_50/inst/clk_out1 | fsm_uart_0/en_trans_s                            | reset_i_IBUF                   |                3 |              8 |         2.67 |
+|  clk_wiz_50/inst/clk_out1 | uart_core_0/receive_0/sel_s                      | reset_i_IBUF                   |                1 |              8 |         8.00 |
+|  clk_wiz_50/inst/clk_out1 | uart_core_0/transmit_0/sel_reg_s                 | reset_i_IBUF                   |                4 |              8 |         2.00 |
+|  clk_wiz_50/inst/clk_out1 | fsm_uart_0/en_cpt_s                              | reset_i_IBUF                   |                3 |              9 |         3.00 |
+|  clk_wiz_50/inst/clk_out1 | uart_core_0/receive_0/en_cpt_s                   | reset_i_IBUF                   |                2 |             12 |         6.00 |
+|  clk_wiz_50/inst/clk_out1 | uart_core_0/transmit_0/en_reg_s                  | reset_i_IBUF                   |                4 |             14 |         3.50 |
+|  clk_wiz_50/inst/clk_out1 | uart_core_0/baud_generator_0/Top16_o             | reset_i_IBUF                   |                6 |             16 |         2.67 |
+|  clk_wiz_50/inst/clk_out1 | uart_core_0/baud_generator_0/rxDiv_s[15]_i_1_n_0 | reset_i_IBUF                   |                6 |             16 |         2.67 |
+|  clk_wiz_50/inst/clk_out1 | ascon_0/U0/en_cipher_o                           | reset_i_IBUF                   |               30 |             64 |         2.13 |
+|  clk_wiz_50/inst/clk_out1 | fsm_uart_0/en_ad_s                               | reset_i_IBUF                   |               14 |             64 |         4.57 |
+|  clk_wiz_50/inst/clk_out1 | ascon_0/U0/en_tag_o                              | reset_i_IBUF                   |               41 |            128 |         3.12 |
+|  clk_wiz_50/inst/clk_out1 | fsm_uart_0/en_nonce_s                            | reset_i_IBUF                   |               28 |            128 |         4.57 |
+|  clk_wiz_50/inst/clk_out1 | fsm_uart_0/en_tag_s                              | reset_i_IBUF                   |               20 |            128 |         6.40 |
+|  clk_wiz_50/inst/clk_out1 | fsm_uart_0/en_key_s                              | reset_i_IBUF                   |               41 |            128 |         3.12 |
+|  clk_wiz_50/inst/clk_out1 |                                                  | reset_i_IBUF                   |               36 |            131 |         3.64 |
+|  clk_wiz_50/inst/clk_out1 | ascon_0/U0/en_reg_state_o                        | reset_i_IBUF                   |               96 |            320 |         3.33 |
+|  clk_wiz_50/inst/clk_out1 | nolabel_line131/en_reg_ascon_o                   | reset_i_IBUF                   |              277 |           1472 |         5.31 |
+|  clk_wiz_50/inst/clk_out1 | fsm_uart_0/en_wave_s                             | reset_i_IBUF                   |              318 |           1472 |         4.63 |
+|  clk_wiz_50/inst/clk_out1 | fsm_uart_0/cipher_reg_0_i_1_n_0                  | reset_i_IBUF                   |              233 |           1472 |         6.32 |
++---------------------------+--------------------------------------------------+--------------------------------+------------------+----------------+--------------+
+
+
